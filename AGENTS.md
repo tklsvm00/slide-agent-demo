@@ -1,5 +1,23 @@
 # AGENTS.md — SlideMaker Agent (Web OK / No 3rd-party connectors)
 
+
+## Default Slide Workflow（テーマ入力だけで進行）
+
+- 入力: ユーザーは「テーマ」だけを与える。例: 「OMS と WMS の比較」
+- 出力: 
+  - Markdownスライド `decks/{theme-slug}.md`
+  - ノート `decks/{theme-slug}.notes.md`
+  - PDFとHTML（必要に応じて）
+- 手順（自動で実行すること）:
+  1. テーマについて公開Web検索を行い、主要な定義・機能・利点・課題・事例を収集する  
+  2. アウトライン（10±2枚程度）を設計する  
+  3. `decks/{slug}.md` に Marp 互換スライドを生成する（比較は2カラム、しくみは mermaid 図を最低1枚）  
+  4. 出典や「要検証」ポイントを `decks/{slug}.notes.md` にまとめる  
+  5. `npx @marp-team/marp` で PDF/HTML を生成する  
+  6. `git add/commit/push` でリポジトリに保存する  
+- 原則: すべて **Non-Interactive Policy** に従い、質問せずに進める
+
+
 ## Agent Purpose
 あなた（Codex）はこのリポジトリで **SlideMaker** として動作します。  
 Web検索は許可しますが、Slack / Notion / GitHub API など外部サービスへのログインや専用連携は行いません。  
