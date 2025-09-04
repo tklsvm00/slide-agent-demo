@@ -1,0 +1,29 @@
+{
+  "slug": "jp-tax-invoice-coupon",
+  "updated": "2025-09-04",
+  "coverage_target": 0.9,
+  "slides": [
+    {"id": "T-ES", "claims": [
+      {"text": "税込割引は対価の減少として税額も減額", "sources": ["gov:NTA_invoice"], "counter": ["case:third_party_coupon"]},
+      {"text": "複数税率は税込構成比で按分", "sources": ["gov:NTA_QA"], "counter": ["alt:line_level_discount_only"]},
+      {"text": "税率グループ単位で端数整合", "sources": ["best:invoice_practice"], "counter": []}
+    ]},
+    {"id": "T-SCQA", "claims": [{"text": "インボイス要件により税率別表示が必須", "sources": ["gov:NTA_invoice"], "counter": []}]},
+    {"id": "T-UNIT", "claims": [{"text": "按分例: 10%/8%で1,000円を配分", "sources": ["gov:NTA_QA"], "counter": ["alt:manual_override"]}]},
+    {"id": "T-OPS", "claims": [{"text": "事後値引は返還インボイスで処理", "sources": ["gov:NTA_return_invoice"], "counter": []}]},
+    {"id": "COMPARE", "claims": [{"text": "非課税と不課税は定義と課税売上割合への影響が異なる", "sources": ["law:CTA_guideline","vendor:MF_help"], "counter": []}]},
+    {"id": "T-ALT", "claims": [{"text": "推奨は税率別マイナス行", "sources": ["vendor:MF_help"], "counter": ["alt:header_discount"]}]},
+    {"id": "T-PLAN", "claims": [{"text": "4週でテンプレ整備と統制実装", "sources": ["internal:plan"], "counter": []}]},
+    {"id": "T-KPI", "claims": [{"text": "誤請求率の低減と作成時間短縮", "sources": ["internal:ops"], "counter": []}]}
+  ],
+  "source_map": {
+    "gov:NTA_invoice": "https://www.nta.go.jp/",
+    "gov:NTA_QA": "https://www.nta.go.jp/",
+    "gov:NTA_return_invoice": "https://www.nta.go.jp/",
+    "law:CTA_guideline": "https://www.mof.go.jp/",
+    "vendor:MF_help": "https://invoice.moneyforward.com/",
+    "best:invoice_practice": "(要調査)"
+  },
+  "coverage_status": {"claims_total": 12, "claims_with_sources": 9, "primary_ratio": 0.5}
+}
+
