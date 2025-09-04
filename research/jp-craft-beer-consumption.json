@@ -1,0 +1,34 @@
+{
+  "slug": "jp-craft-beer-consumption",
+  "updated": "2025-09-04",
+  "coverage_target": 0.9,
+  "slides": [
+    {
+      "id": "T-ES",
+      "claims": [
+        {"text": "国内クラフトビール消費は近年拡大", "sources": ["official:BAJ", "gov:e-Stat"], "counter": ["gov:NTA_total_beer_decline"]},
+        {"text": "成長はチャネル多様化と高付加価値志向が牽引", "sources": ["news:Nikkei", "assoc:JCBA"], "counter": ["macro:real_income_pressure"]},
+        {"text": "税制・健康志向の変化が品目間シフトを促進", "sources": ["gov:MOF_tax", "gov:MHLW_guideline"], "counter": ["alt:price_sensitivity"]}
+      ]
+    },
+    {"id": "T-SCQA", "claims": [{"text": "全体のビール需要は長期低下も、クラフトは堅調", "sources": ["official:BAJ", "gov:NTA"], "counter": ["macro:population_decline"]}]},
+    {"id": "T-SIZE", "claims": [{"text": "クラフト市場規模の推定（仮値レンジ）", "sources": ["assoc:JCBA", "secondary:Statista"], "counter": ["method:definition_variance"]}]},
+    {"id": "T-COHORT", "claims": [{"text": "新規飲用者の定着率はイベント接触で上昇", "sources": ["assoc:JCBA_event"], "counter": ["alt:novelty_fades"]}]},
+    {"id": "T-UNIT", "claims": [{"text": "BrewpubのLTV/CACは体験の質に依存", "sources": ["case:brewpub_bench"], "counter": ["alt:high_rent"]}]},
+    {"id": "T-ALT", "claims": [{"text": "オプション比較：DTC強化 vs 外食連携 vs 地域観光", "sources": ["news:Nikkei", "gov:tourism"]}]},
+    {"id": "T-PLAN", "claims": [{"text": "12ヶ月ロードマップとKPI連動", "sources": ["internal:planning"], "counter": []}]},
+    {"id": "T-KPI", "claims": [{"text": "KPIは購買頻度・客単価・チャネル構成", "sources": ["best:retail_metrics"], "counter": []}]}
+  ],
+  "source_map": {
+    "official:BAJ": "https://www.brewers.or.jp/data/",
+    "gov:NTA": "https://www.nta.go.jp/",
+    "gov:e-Stat": "https://www.e-stat.go.jp/",
+    "assoc:JCBA": "https://www.beertaster.org/",
+    "news:Nikkei": "https://www.nikkei.com/",
+    "gov:MOF_tax": "https://www.mof.go.jp/",
+    "gov:MHLW_guideline": "https://www.mhlw.go.jp/",
+    "secondary:Statista": "https://www.statista.com/"
+  },
+  "coverage_status": {"claims_total": 12, "claims_with_sources": 8, "primary_ratio": 0.5}
+}
+
